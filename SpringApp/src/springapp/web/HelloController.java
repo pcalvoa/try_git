@@ -14,12 +14,12 @@ import java.io.IOException;
 
 public class HelloController implements Controller {
 
-    protected final Log logger = LogFactory.getLog(getClass());
+    protected final Log log = LogFactory.getLog(getClass());
 
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        logger.info("Returning hello view");
+        log.info("Returning hello view");
 
         return new ModelAndView("hello.jsp");
     }
