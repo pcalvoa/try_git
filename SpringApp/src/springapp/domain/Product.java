@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Product implements Serializable {
 
     private String description;
-    private Double price;
+    private Double prize;
     
     public String getDescription() {
         return description;
@@ -15,18 +15,18 @@ public class Product implements Serializable {
         this.description = description;
     }
     
-    public Double getPrice() {
-        return price;
+    public Double getPrize() {
+        return prize;
     }
     
-    public void setPrice(Double price) {
-        this.price = price;
+    public void setPrize(Double price) {
+        this.prize = prize;
     }
     
     public String toString() {
         StringBuffer buffer = new StringBuffer();
         buffer.append("Description: " + description + ";");
-        buffer.append("Price: " + price);
+        buffer.append("Price: " + prize);
         return buffer.toString();
     }
 }
