@@ -1,17 +1,16 @@
 <?xml version="1.0"?>
 
 <project name="SpringApp" basedir="." default="usage">
-    
-	<property name="name" value="springapp"/>
 	
 	<property file="build.properties"/>
 
     <property name="src.dir" value="src"/>
-    <property name="web.dir" value="WebContent"/>
-    <property name="build.dir" value="build/classes"/>
+    <property name="web.dir" value="war"/>
+    <property name="build.dir" value="${web.dir}/WEB-INF/classes"/>
+    <property name="name" value="springapp"/>
 	
 	<property name="test.dir" value="test"/>
-	<property name="test.build.dir" value="build/test"/>
+	<property name="test.build.dir" value="${web.dir}/WEB-INF/classes"/>
     
 
     <path id="master-classpath">
