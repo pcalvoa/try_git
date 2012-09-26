@@ -11,14 +11,23 @@
 	
 	<property name="test.dir" value="test"/>
 	<property name="test.build.dir" value="${web.dir}/WEB-INF/classes"/>
-    
 
+    <path id="test-classpath">
+        <fileset dir="${web.dir}/WEB-INF/lib">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="${web.dir}/WEB-INF/lib/test">
+            <include name="*.jar"/>
+        </fileset>
+        <pathelement path="${build.dir}"/>
+        <pathelement path="${test.dir}"/>
+        <pathelement path="${web.dir}/WEB-INF/classes"/>
+    </path>
+    
     <path id="master-classpath">
         <fileset dir="${web.dir}/WEB-INF/lib">
             <include name="*.jar"/>
         </fileset>
-    	
-    	
         <fileset dir="${web.dir}/WEB-INF/lib/test">
             <include name="*.jar"/>
         </fileset>
@@ -106,12 +115,43 @@
 	            haltonfailure="false"
 	            failureproperty="tests.failed"
 	            showoutput="true">
-	            <classpath refid="master-classpath"/>
+	            <!--<classpath refid="master-classpath"/>-->
+	        	<classpath refid="test-classpath"/>
 	            <formatter type="brief" usefile="false"/>
 	            
 	            <batchtest>
 	                <fileset dir="${test.build.dir}">
 	                    <include name="**/*Tests.*"/>
+	                	<exclude name="**/Jdbc*Tests.*"/>
+	                </fileset>
+	            </batchtest>
+	            
+	        </junit>
+	        
+	        <fail if="tests.failed">
+	            tests.failed=${tests.failed}
+	            ***********************************************************
+	            ***********************************************************
+	            ****  One or more tests failed!  Check the output ...  ****
+	            ***********************************************************
+	            ***********************************************************
+	        </fail>
+	    </target>
+	
+	
+    	<target name="TestsDB" depends="build, buildtests" 
+            description="Run db tests">
+        	<junit printsummary="on"
+	            fork="false"
+	            haltonfailure="false"
+	            failureproperty="tests.failed"
+	            showoutput="true">
+	            <classpath refid="test-classpath"/>
+	            <formatter type="brief" usefile="false"/>
+	            
+	            <batchtest>
+	                <fileset dir="${build.dir}">
+	                    <include name="**/Jdbc*Tests.*"/>
 	                </fileset>
 	            </batchtest>
 	            
@@ -205,6 +245,91 @@
                  username="${tomcat.manager.username}"
                  password="${tomcat.manager.password}"/>
     </target>
+	
+	
+    <target name="DBcreateTables">
+        <echo message="CREATE TABLES USING: ${db.driver} ${db.url}"/>
+        <sql driver="${db.driver}"
+             url="${db.url}"
+             userid="${db.user}"
+             password="${db.pw}"
+             onerror="continue"
+             src="db/create_products.sql">  
+            <classpath refid="master-classpath"/>
+        </sql> 
+    </target>
+
+    <target name="DBdropTables">
+        <echo message="DROP TABLES USING: ${db.driver} ${db.url}"/>
+        <sql driver="${db.driver}"
+             url="${db.url}"
+             userid="${db.user}"
+             password="${db.pw}"
+             onerror="continue">  
+            <classpath refid="master-classpath"/>
+
+        DROP TABLE products;
+
+        </sql> 
+    </target>
+
+    <target name="DBloadData">
+        <echo message="LOAD DATA USING: ${db.driver} ${db.url}"/>
+        <sql driver="${db.driver}"
+             url="${db.url}"
+             userid="${db.user}"
+             password="${db.pw}"
+             onerror="continue"
+             src="db/load_data.sql">  
+            <classpath refid="master-classpath"/>
+        </sql> 
+    </target>
+
+    <target name="DBprintData">
+        <echo message="PRINT DATA USING: ${db.driver} ${db.url}"/>
+        <sql driver="${db.driver}"
+             url="${db.url}"
+             userid="${db.user}"
+             password="${db.pw}"
+             onerror="continue"
+             print="true">  
+            <classpath refid="master-classpath"/>
+
+        SELECT * FROM products;
+
+        </sql> 
+    </target>
+
+    <target name="DBclearData">
+        <echo message="CLEAR DATA USING: ${db.driver} ${db.url}"/>
+        <sql driver="${db.driver}"
+             url="${db.url}"
+             userid="${db.user}"
+             password="${db.pw}"
+             onerror="continue">  
+            <classpath refid="master-classpath"/>
+
+        DELETE FROM products;
+
+        </sql> 
+    </target>
+
+    <target name="shutdownDb">
+        <echo message="SHUT DOWN DATABASE USING: ${db.driver} ${db.url}"/>
+        <sql driver="${db.driver}"
+             url="${db.url}"
+             userid="${db.user}"
+             password="${db.pw}"
+             onerror="continue">  
+            <classpath refid="master-classpath"/>
+
+        SHUTDOWN;
+
+        </sql> 
+    </target>
+	
+	
+	
 
 <!-- End Tomcat tasks -->
 
