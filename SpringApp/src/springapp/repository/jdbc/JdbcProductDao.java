@@ -20,7 +20,7 @@ public class JdbcProductDao extends SimpleJdbcDaoSupport implements ProductDao {
 
 
     public List<Product> getProductList() {
-        logger.info("Getting products!");
+        logger.info("**--** Getting products!");
         List<Product> products = getSimpleJdbcTemplate().query(
                 "select id, description, price from products", 
                 new ProductMapper());
@@ -28,12 +28,17 @@ public class JdbcProductDao extends SimpleJdbcDaoSupport implements ProductDao {
     }
 
     public void saveProduct(Product prod) {
-        logger.info("Saving product: " + prod.getDescription());
+        logger.info("**--** Savinnnng product: " + prod.toString());
+        
+        MapSqlParameterSource sqlParameters = new MapSqlParameterSource()
+	        .addValue("description", prod.getDescription())
+	        .addValue("price", prod.getPrice())
+	        .addValue("id", prod.getId());
+        logger.info("***---*** Parameters: " + sqlParameters.toString());
+        
         int count = getSimpleJdbcTemplate().update(
             "update products set description = :description, price = :price where id = :id",
-            new MapSqlParameterSource().addValue("description", prod.getDescription())
-                .addValue("price", prod.getPrice())
-                .addValue("id", prod.getId()));
+            sqlParameters);
         logger.info("Rows affected: " + count);
     }
     
