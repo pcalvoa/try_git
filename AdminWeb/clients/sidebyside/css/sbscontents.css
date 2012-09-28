@@ -1,0 +1,320 @@
+@CHARSET "ISO-8859-1";
+
+/* GENERIC */
+
+/* UX - FONTS */
+/* @font-face */
+/* Frutiger Regular */
+@font-face {
+	font-family: frutiger;
+	src: url(../fonts/frutiger.eot);
+	src: url(../fonts/frutiger.eot?#iefix) format('embedded-opentype'),
+		url(../fonts/frutiger.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	zoom: 1;
+	font-smooth: always;
+}
+
+/* Frutiger Bold */
+@font-face {
+	font-family: frutbd;
+	src: url(../fonts/frutbd.eot);
+	src: url(../fonts/frutbd.eot?#iefix) format('embedded-opentype'),
+		url(../fonts/frutbd.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	zoom: 1;
+	font-smooth: always;
+}
+
+/* HEADER */
+
+#header_session {
+	margin:0;
+	/*text-decoration:none;
+	color: #FFFFFF;*/	
+	width:100%;
+	height:25px;
+	background-color:#000000;	
+	/*font-family: frutiger, Verdana;*/	
+}
+/*
+#header_session div {		
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	padding-top:3px;	
+}
+*/
+body {	
+	margin: 0 auto;
+	padding: 0;	
+	font-family: Frutiger, "Frutiger Linotype", 'Myriad Pro', Myriad, 'Segoe UI', Tahoma, Verdana, Geneva, sans-serif;
+	/*font-size:14px;*/	
+	
+	background-image: url(../images/common/bg_global.gif);
+	background-repeat: repeat-x;
+	background-color: #ffffff;
+	 	
+}
+
+p, h1, form, ul{border:0; margin:0; padding:0;}
+
+a {
+	text-decoration:none;	
+}
+
+
+#header_client {
+	margin:0;
+	text-decoration:none;	
+	height:100px;
+	border: none;
+	background-color:transparent;		
+}
+
+
+#header {
+	margin:0;
+	text-decoration:none;
+	color: #FFFFFF;	
+	width:800px;
+	height:95px;
+	background-color:#419EDA;
+}
+
+/*
+#header h1 {
+	color: #FFFFFF;
+	text-align:left;	
+	float:left;
+	text-decoration:none;
+	font-size:1.5625em;		
+	font-weight: normal;	
+	padding-top: 20px; 
+	padding-left: 15px;
+}
+
+#header a.close {
+	text-align:right;	
+	float:right;
+	text-decoration:none;	
+	padding-top: 18pt; 
+	padding-right: 15pt;	
+}
+*/
+
+#header img {
+	border: none;
+}
+
+/* BODY */
+
+.bodycontent {
+	width:800px;
+	height:300px;	
+	background-color:#fff;
+	display: block;
+}
+
+#message {
+	background-color:#F0F0F0;
+	position:absolute;
+	float:left;
+	margin:0;
+	padding-top:15px;
+	padding-left:10px;
+	padding-right:5px;
+	width:140px;
+	height:365px;	
+	text-align: left;
+}
+
+/* FOOT */
+
+#foot {
+	margin:0;
+	text-decoration:none;
+	color: #FFFFFF;	
+	width:800px;
+	height:45px;	
+	border: none;	
+	background-color:#666666;		
+}
+
+.userView {
+	overflow:auto;
+	width:300px;
+	height:140px;
+}
+
+.dialog{
+	height:430px;		
+}
+
+
+/* DESIGN */
+
+/* states and images */
+.ui-icon { 
+	display: inline; 
+	text-indent: -99999px; 
+	overflow: hidden; 
+	background-repeat: no-repeat; 
+}
+
+.ui-icon-alert { 
+	background-image:url(../images/icons/alert_icon.png);
+}
+
+.separator {
+	text-decoration:none;
+	text-indent: -9999px;
+	width:800px;
+	height:20px;
+	background-image:url(../images/common/separator.jpg);
+	background-position: top;
+	background-repeat:no-repeat;
+	border: none;
+	background-color:#FFFFFF;	
+}
+
+.mini {
+	width:600px;
+	height:20px;
+	background-image:url(../images/common/separator_mini.jpg);	
+}
+
+.micro {
+	width:300px;
+	height:20px;
+	background-image:url(../images/common/separator_micro.jpg);	
+}
+
+.whiteRow {
+	height:28px;
+	background-color:#fff;	
+	padding:0;
+	margin:0;
+	vertical-align:middle;
+}
+
+.greyRow {
+	height:28px;
+	background-color:#ddd;
+	padding:0;
+	margin:0;	
+	vertical-align:middle;
+}
+
+/* MENUS */
+
+#submenu {	
+	margin:0;
+	list-style:none;		
+	height:50px;	
+	border: none;
+	background-color:#FFFFFF;					
+}
+
+/* SUBMENU BUTTONS */
+
+#submenu .button {
+  display:inline;
+  height:27px;
+  width:124px;
+  border: none;
+  text-align:center;
+  text-decoration:none;
+  vertical-align:middle;
+  font-weight: bold;
+  color:#FFFFFF;
+  float:left;  
+}
+
+#submenu a.button
+{	
+	#position: relative;	
+	vertical-align:middle;
+	padding-top:6px;
+}
+
+#submenu a.button:hover
+{	
+	cursor:pointer;
+}
+
+.newbutton { 
+  background: url(../images/buttons/button_new.png) no-repeat 0 0;
+}
+
+.newbutton.selected {
+	background: url(../images/buttons/button_new_hover.png) no-repeat 0 0;
+	color:#000000;
+}
+
+.searchbutton { 
+   background: url(../images/buttons/button_search.png) no-repeat 0 0;
+}
+
+
+.searchbutton.selected {	
+	background: url(../images/buttons/button_search_hover.png) no-repeat 0 0;
+	color:#000000;
+}
+
+
+/* BUTTONS */
+
+#button_delete
+{
+  display:inline;
+  height:22px;
+  width:22px;
+  background: url(../images/buttons/button_delete.png) no-repeat 0 0;
+  text-indent:-9999px;
+  text-decoration:none;
+  border: none;
+}
+
+#button_delete:hover
+{ 
+ 	background: url(../images/buttons/button_delete_hover.png) no-repeat 0 0;
+ 	cursor:pointer;
+}
+
+#button_view
+{
+  display:inline;
+  height:22px;
+  width:22px;
+  background: url(../images/buttons/button_view.png) no-repeat 0 0;
+  text-indent:-9999px;
+  text-decoration:none;
+  border: none;
+}
+
+#button_view:hover
+{ 
+ 	background: url(../images/buttons/button_view_hover.png) no-repeat 0 0;
+ 	cursor:pointer;
+}
+
+.link {
+	color:rgb(112,167,223);
+	font-size:100%;	
+}
+
+.link:hover {
+	color:rgb(203,223,243);
+	cursor:pointer;
+}
+
+
+/* SCROLL */
+
+.mcs_container {
+	overflow-y: auto; 	
+	overflow-x:hidden;
+}

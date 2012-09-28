@@ -1,0 +1,97 @@
+/* GET FROM JQUERY UI
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%; 
+}
+
+
+/* Overlays */  
+.ui-widget-overlay { 
+	background: #5c5c5c url(../images/alert_window.png) 50% 50% repeat-x;  
+	opacity: .80;filter:Alpha(Opacity=80); 
+}
+
+/*
+.ui-widget-shadow { margin: -7px 0 0 -7px; padding: 7px; background: #cccccc url(images/ui-bg_flat_30_cccccc_40x100.png) 50% 50% repeat-x; opacity: .60;filter:Alpha(Opacity=60); -moz-border-radius: 8px; -webkit-border-radius: 8px; }/* Accordion
+*/
+
+/*
+.ui-dialog .ui-dialog-buttonpane { text-align: left; border-width: 1px 0 0 0; background-image: none; margin: .5em 0 0 0; padding: .3em 1em .5em .4em; }
+.ui-dialog .ui-dialog-buttonpane button { float: right; margin: .5em .4em .5em 0; cursor: pointer; padding: .2em .6em .3em .6em; line-height: 1.4em; width:auto; overflow:visible; }
+*/
+
+.dlgWait {
+	margin:0 auto;
+	width:129px;
+	height:160px;
+	background: transparent url(../images/icons/wait.png) no-repeat center;
+	text-align:center;	
+	opacity:0.8;
+		
+}
+
+.dlgWait div {
+	padding:98px 5px 0 32px;
+	position:absolute;
+}
+
+.dlgWait .ui-dialog-titlebar-close {
+    display: none;
+}
+
+.dlgDefault {
+	margin:0 auto;
+	width:350;
+	height:254;	
+	text-align:left;	
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center;	 
+}
+
+.dlghead {
+	background:transparent url(../images/common/alert_window_head.png) no-repeat center center;		
+	float:middle;
+	width:240px;
+	height:31px;			
+}
+
+.dlgbody {
+	background:transparent url(../images/common/alert_window_body.png) repeat-y center top;	
+	float:middle;
+	width:240px;
+	height:160px;	
+	padding-top:10px;
+}
+
+.dlgfoot {
+	background:transparent url(../images/common/alert_window_foot.png) no-repeat center top;	
+	float:middle;
+	width:240px;
+	height:65px;	
+}
+
+.dlgInner {
+	width:198px;
+	margin:0 auto;
+	text-align:center;
+	padding-top:10px;
+}
+.dlgDefault .ui-dialog-titlebar-close {
+    display: none;
+}
+
+.clearContainer { /* generic container (i.e. div) for floating buttons */
+    overflow: hidden;
+    width: 100%;
+}
+
+
+
+

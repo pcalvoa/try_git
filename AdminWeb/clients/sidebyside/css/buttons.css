@@ -1,0 +1,164 @@
+.ButtonGenericLeft {
+	height: 38px;
+	padding-top: 7px;
+	float: left;
+}
+
+.ButtonGenericRight {
+	height: 38px;
+	padding-top: 7px;
+	float: right;
+}
+/** DARK BACKGROUND BLUE **/
+.acceptDarkButton {
+	background: transparent url('../images/buttons/btn_accept_dark.png')
+		no-repeat scroll right top;
+	display: block;
+	height: 29px;
+	padding-right: 5px; /* sliding doors padding */
+	text-decoration: none;
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 0.875em;
+	color: #ffffff;
+	float: left;
+	cursor: pointer;
+}
+
+/* abeteta: important note --> it is needed to add the correct background color to the span tag*/
+.acceptDarkButton span {
+	background: transparent url('../images/buttons/btn_accept_dark.png')
+		no-repeat;
+	display: block;
+	padding: 5px 15px 5px 20px;
+	height: 29px;
+	float: left;
+}
+
+.acceptDarkButton:link,.acceptDarkButton:visited {
+	color: #ffffff;
+}
+
+.acceptDarkButton:hover {
+	background-position: right -40px;
+	color: #000000;
+}
+
+.acceptDarkButton:hover span {
+	background-position: left -40px;
+	color: #000000;
+}
+
+.acceptDarkButton:active { /* Hover state CSS */
+	background-position: right -120px;
+	color: #ffffff;
+}
+
+.acceptDarkButton:active span { /* Hover state CSS */
+	background-position: left -120px;
+	color: #ffffff;
+}
+
+/** DARK BACKGROUND GRAY **/
+.cancelDarkButton {
+	background: transparent url('../images/buttons/btn_cancel_dark.png')
+		no-repeat scroll right top;
+	display: block;
+	height: 29px;
+	padding-right: 5px; /* sliding doors padding */
+	text-decoration: none;
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 0.875em;
+	color: #333333;
+	float: left;
+	/*background-color:#F00;*/
+	cursor: pointer;
+}
+
+/* abeteta: important note --> it is needed to add the correct background color to the span tag*/
+.cancelDarkButton span {
+	background: transparent url('../images/buttons/btn_cancel_dark.png')
+		no-repeat left top;
+	display: block;
+	padding: 5px 20px 5px 20px;
+	height: 29px;
+	float: left;
+}
+
+.cancelDarkButton:link,.cancelDarkButton:visited {
+	color: #333333;
+}
+
+.cancelDarkButton:hover {
+	background-position: right -40px;
+	color: #000000;
+}
+
+.cancelDarkButton:hover span {
+	background-position: left -40px;
+	color: #000000;
+}
+
+.cancelDarkButton:active { /* Hover state CSS */
+	background-position: right -120px;
+	color: #333333;
+}
+
+.cancelDarkButton:active span { /* Hover state CSS */
+	background-position: left -120px;
+	color: #333333
+}
+
+/** WHITE BACKGROUND GRAY **/
+.cancelWhiteButton {
+	background: transparent url('../images/buttons/btn_cancel_white.png')
+		no-repeat scroll right top;
+	display: block;
+	height: 28px;
+	padding-right: 5px; /* sliding doors padding */
+	text-decoration: none;
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 0.875em;
+	color : #333333;
+	cursor: pointer;
+}
+
+/* abeteta: important note --> it is needed to add the correct background color to the span tag*/
+.cancelWhiteButton span {
+	background: transparent url('../images/buttons/btn_cancel_white.png')
+		no-repeat;
+	display: block;
+	padding: 5px 15px 5px 20px;
+}
+
+.cancelWhiteButton:link,.cancelWhiteButton:visited {
+	color: #333333;
+}
+
+.cancelWhiteButton:hover {
+	background-position: right -40px;
+	color: #000000;
+}
+
+.cancelWhiteButton:hover span {
+	background-position: left -40px;
+	color: #000000;
+}
+
+.cancelWhiteButton:active { /* Hover state CSS */
+	background-position: right -120px;
+	color: #333333;
+}
+
+.cancelWhiteButton:active span { /* Hover state CSS */
+	background-position: left -120px;
+	color: #333333
+}
+
+.buttonWrapper {
+	/* Container you can use to surround a CSS button to clear float */
+	overflow: hidden;
+	width: 100%;
+}

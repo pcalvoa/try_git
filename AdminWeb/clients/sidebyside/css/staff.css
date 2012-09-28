@@ -1,0 +1,178 @@
+@charset "utf-8";
+/* CSS Document */
+/*.mt-landing-section-staff-content{
+
+min-height:430px;
+float:left;
+}*/
+
+.mt-landing-section-shadow546-top-staff{
+background-image:url(../images/safezone/underline_safezone_list_top.png);
+background-repeat:no-repeat;
+background-position:top left;
+width:600px;
+}
+.mt-landing-section-shadow546-top-staff-padding{
+background-image:url(../images/safezone/underline_safezone_list_top.png);
+background-repeat:no-repeat;
+background-position:left 30px;
+width:600px;
+}
+.mt-landing-section-shadow938-top-staff-padding{
+background-image:url(../images/safezone/underline_safezone_list_top.png);
+background-repeat:no-repeat;
+background-position:left 30px;
+width:938px;
+}
+.mt-landing-section-shadow546-bottom-staff{
+width:600px;
+height:30px;
+background-image:url(../images/safezone/underline_safezone_list_bottom.png);
+background-repeat:no-repeat;
+background-position:bottom left;
+float:left;
+}
+
+.mt-landing-staff-list{
+padding-top:5px;
+list-style:inside;
+list-style-image:none;
+list-style-type:none;
+
+}
+
+.mt-landing-staff-list > li{
+height:40px;
+padding-left:20px;
+line-height:16px;
+background-color:#CCC;
+padding-top:15px;
+}
+
+.mt-landing-staff-list-details{
+height:20px;
+list-style:inside;
+list-style-image:none;
+list-style-type:none;
+}
+.mt-landing-staff-list-details > li{
+height:20px;
+padding-left:20px;
+line-height:16px;
+background-color:#CCC;
+
+margin-top:5px;
+margin-bottom:5px;
+}
+.mt-landing-staff-list-details > li:hover {
+
+background-color:#999;
+}
+
+.mt-landing-staff-list > li:hover {
+
+background-color:#999;
+}
+.mt-landing-staff-list-ico{
+float:left;
+background-color:#CFF;
+width:25px;
+padding-top:5px;
+}
+
+.mt-landing-staff-list-text{
+float:left;
+background-color:#CC0;
+
+
+}
+.mt-landing-staff-list-bigtext{
+float:left;
+background-color:#9FC;
+width:250px;
+}
+.mt-landing-staff-list-bigtext> span{
+float:left;
+background-color:#C69;
+width:250px;
+}
+
+.mt-landing-staff-list-actions{
+float:right;
+background-color:#FF0;
+width:25px;
+height:25px;
+}
+
+/*** landing staff details ***/
+
+.mt-landing-container-details-grey{
+min-height:80px;
+margin-bottom:30px;
+}
+.mt-landing-container-details-info{
+
+}
+
+.mt-landing-container-details-info > img {
+float:left;
+padding-right:10px;
+}
+.mt-landing-container-details-text{
+float:left;
+padding-bottom:5px;
+}
+.mt-landing-container-details-text > div {
+float:left;
+padding-right:10px;
+
+}
+.mt-landing-container-details-text > div > img {
+padding-left:10px;
+padding-top:0px;
+
+margin-top:-10px;
+}
+
+.mt-landing-container-details-text > div > a {
+padding-left:10px;
+}
+
+/* landing staff details content */
+
+.mt-landing-section-content-staff-info{
+width:400px;
+float:left;
+overflow:auto;
+margin-top:30px;
+min-height:400px;
+max-height:400px;
+}
+
+.mt-landing-section-content-staff-text{
+width:140px;
+float:right;
+margin-top:50px;
+height:150px;
+
+}
+
+.bg-grey{
+background-color:#e9e9e9;
+}
+
+.mt-header-display-inline{
+display:inline;
+}
+.mt-padding-bottom-15{
+padding-bottom:15px;
+}
+.mt-margin-bottom-15{
+margin-bottom:15px;
+}
+.mt-landing-container-details-info-user>div {
+ padding-top: 6px;
+}
+.mt-padding-top-15{
+ padding-top: 15px;
+}

@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*portal*/
+.container_12 {
+
+
+}
+
+.text_aling_left{
+text-align:left;
+}
+.text_aling_right{
+text-align:right;
+}
+
+/* Styles for content box */
+
+.mt-general-box-top {
+	background:transparent url(../images/common/box_general_top.png);
+	background-repeat:no-repeat;
+	background-position:top left;
+	padding: 0px;
+	width: 990px;
+	height: 8px;
+	margin:0 auto;
+
+}
+.mt-general-box-top-grey {
+	background: url('../images/common/box_general_top_grey.png');
+	background-repeat:no-repeat;
+	background-position:top left;
+	padding: 0px;
+	width: 990px;
+	height: 8px;
+	margin:0 auto;
+}
+.mt-general-box-top-login {
+	background: url('../images/common/box_signin_top.png');
+	background-repeat:no-repeat;
+	background-position:top left;
+	padding: 0px;
+	width: 990px;
+	height: 8px;
+	margin:0 auto;
+}
+.mt-general-box-inner {
+	margin:0 auto;
+	width: 990px;	
+}
+
+.mt-general-box-content{
+	background:url('../images/common/box_general_middle.png');
+	background-repeat: repeat-y;
+	width:inherit;
+	min-height:520px;
+}
+.mt-general-box-content-login{
+	background:url('../images/common/box_signin_middle.png');
+	background-position:top left;
+	background-repeat: repeat-y;
+	width:inherit;
+	min-height:500px;
+}
+.mt-general-box-bottom-loggin {
+	background: transparent url('../images/common/box_signin_bottom.png');
+	background-repeat:no-repeat;
+	background-position:top left;
+	padding: 0px;
+	width: 990px;
+	height: 13px;
+	margin:0 auto;	
+}
+.mt-general-box-bottom {
+    background: transparent url('../images/common/box_general_bottom.png');
+	background-repeat:no-repeat;
+	background-position:top left;
+    padding: 0px;
+	width: 990px;
+	height: 13px;
+	margin:0 auto;	
+}
+
+/**  p for empty landing  **/
+.mt-landing-p-nurse-landing{
+}
+
+.mt-landing-p-nurse-landing > div{
+background-color:#FFF;
+margin-top:30px;
+padding-top:7px;
+padding-right:10px;
+float:left;
+padding-left:180px;
+}
+
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre6"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/sitemesh-2.4.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/urlrewritefilter-3.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/catalina.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/securityfilter.jar" sourcepath="C:/Documents and Settings/Usuario/.m2/repository/securityfilter/securityfilter/2.0/securityfilter-2.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/servlet-2.3.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="con" path="org.eclipse.hyades.test.tools.core.TPTP_LIBRARIES/org.eclipse.hyades.test.tools.core"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Web App Libraries"/>
+	<classpathentry kind="lib" path="lib/mockito-all-1.9.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/axis.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/areaservice.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-codec.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-collections.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-digester.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-discovery-0.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/core-htc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/filtro-generico.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jakarta-oro.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jaxrpc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/log4j-1.2.8.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mail.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-5.0.5-bin.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/util.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/wsdl4j.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/wss4j-1.5.12.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/xmlsec-1.4.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/bundle-licenses.jar" sourcepath="/bundle-licenses"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

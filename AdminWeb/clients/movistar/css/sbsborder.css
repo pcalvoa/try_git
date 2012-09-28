@@ -1,0 +1,33 @@
+@CHARSET "ISO-8859-1";
+
+.rounded-corners-up {
+	border-radius: 10px 10px 0 0;
+	-ms-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	-khtml-border-radius: 10px 10px 0 0;
+}
+
+.rounded-corners-down {
+	position: relative;
+	border-radius: 0 0 10px 10px;
+	-ms-border-radius: 0 0 10px 10px;
+	-moz-border-radius: 0 0 10px 10px;
+	-webkit-border-radius: 0 0 10px 10px;
+	-khtml-border-radius: 0 0 10px 10px;
+	
+}
+
+.round-top {
+	border-style:none;
+	<!--[if IE]>
+		background:transparent url('../images/common/top_round.png') no-repeat center top;
+	<![endif]-->
+}
+
+.round-bottom {	
+	border-style:none;
+	<!--[if IE]>
+		background:transparent url('../images/common/bottom_round.png') no-repeat center bottom;
+	<![endif]-->
+}

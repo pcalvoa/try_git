@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE securityfilter-config PUBLIC
+    "-//SecurityFilter.org//DTD Security Filter Configuration 2.0//EN"
+    "http://www.securityfilter.org/dtd/securityfilter-config_2_0.dtd">
+
+<securityfilter-config>
+
+   <security-constraint>
+      <web-resource-collection>
+         <web-resource-name>Secure Pages</web-resource-name>
+         <url-pattern>/views/*</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+         <role-name>admin</role-name>
+      </auth-constraint>
+   </security-constraint>
+
+   <security-constraint>
+      <web-resource-collection>
+         <web-resource-name>Secure pages that the example user is not authorized to view</web-resource-name>
+         <url-pattern>/forbiddenPage.jsp</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+         <role-name>notinthisrole</role-name>
+      </auth-constraint>
+   </security-constraint>
+
+   <login-config>
+      <auth-method>FORM</auth-method>
+      <form-login-config>
+         <form-login-page>/index.jsp</form-login-page>
+         <form-error-page>/index.jsp?error=Invalid+username+or+password</form-error-page>
+         <form-default-page>/views/client.jsp</form-default-page>
+      </form-login-config>
+   </login-config>
+
+   <realm className="com.tid.securityfilter.realm.TrivialSecurityRealm">
+      <!-- <realm-param name="usersConfig" value="/user-config.xml" />-->
+   </realm>
+
+</securityfilter-config>

@@ -1,0 +1,66 @@
+VER 1.1.7
+
+2012/04/02
+
+- Se soluciona error en formulario usuario que no aceptaba password iguales
+
+2012/03/21
+
+- Se crea la carpeta build/WebContent para almacenar la versión funcional
+  a partir de la que se crean los war. Eliminados de /WebContent la parte
+  dinámica parametrizada
+  
+- Se modifica el build.xml para reflejar estos cambios
+
+2012/03/08
+
+- Depurado agujero de seguridad en control de licencias
+- Depurado problema con centro/servicio en modificación de usuario
+
+2012/02/27
+
+- It have added the tests for services
+
+2012/02/23
+- Añadida gestión de licencias tanto en interfaz como en comunicación con el servidor
+- Añadida creación de usuarios con centros y servicios default
+
+VER 1.1.6
+
+2012/01/26
+- Depurados y añadidos JUNIT y librería de mockito
+
+2012/01/25
+- Depurados bugs en IE
+
+2012/01/23
+- Depurado error de script en inicio en IE
+- Añadida nueva versión botones movistar
+
+2011/12/19
+
+- Añadido custom scroll para ambas versiones
+- Separadas las secciones en los dialogs
+
+VER 1.1.5
+
+2011/12/14
+
+- Añadidos todos los cambios para el branding de movistar
+- Ajustados css y fichero config.properties
+- Cambio en la nomenclatura del nombre del war admin_VER_CLIENTE_FECHA.war
+- Selección de idioma almacenada en cookies
+
+VER 1.1
+
+2011/11/29
+- Estructuración de CSS y elementos propios de los diferentes branding
+
+
+2011/11/26
+- Añadidas imágenes para branding movistar
+- Parametrización de id y nombres de ficheros que arrastraban O2
+- Creado css 800_col.css para estructurar contenido
+- Corregido problema de scrollbars en ie
+- Terminado código para verificar si existen usuarios y servicios en borrados
+

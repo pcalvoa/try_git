@@ -1,0 +1,128 @@
+<?xml version="1.0" ?> 
+<project name="AdminWeb" default="war">
+
+	<property name="substitution.file" location="config.properties"/>
+	<property file="${substitution.file}" prefix="s"/>
+	<property name="client" value="${s.CLIENT}" />
+	<property name="client.path" value="clients/${s.CLIENT}" />
+	<property name="src.dir" value="src" />
+	<property name="bundles.dir" value="com/tid/bundles" />
+	<property name="webapp.dir" value="WebContent" />	
+	<property name="lib.dir" value="${webapp.dir}/WEB-INF/lib" />
+	<property name="classes.dir" value="build/classes" />
+	<property name="web.dir" value="build/WebContent" />
+	<property name="libportal.dir" value="${web.dir}/WEB-INF/lib" />
+		
+	<tstamp>
+    	<format property="TODAY" pattern="yyyyMMddHHmmss" />
+   	</tstamp>
+			
+	<path id="compile.classpath">
+		<fileset dir="${lib.dir}">
+			<include name="*.jar"/>
+		</fileset>
+		<fileset dir="lib">
+			<include name="*.jar"/>
+		</fileset>
+		
+	</path>
+	
+	<target name="clean">
+		<delete dir="build"/>
+		<delete>
+			<fileset dir="dist" includes="**/*${s.CLIENT}*.war"/>
+		    <!--<fileset dir="${classes.dir}/${bundles.dir}" includes="**/*.properties"/>-->
+			<fileset dir="${webapp.dir}/images" includes="**/*.*"/>
+		    <fileset dir="${webapp.dir}/css" includes="**/*.css"/>
+		 </delete>
+	</target>
+	
+	<target name="init" depends="clean">		
+		<mkdir dir="${classes.dir}"/>				
+		<mkdir dir="dist" />		
+		<mkdir dir="${web.dir}"/>
+	</target>
+	
+	<target name="webcontent" depends="init">
+		<copy todir="${web.dir}">  
+			<fileset dir="${webapp.dir}"/>  
+		</copy> 
+	</target>
+						
+	<target name="compile" depends="webcontent" >
+		<javac destdir="${classes.dir}" debug="true" srcdir="src">
+			<classpath refid="compile.classpath"/>
+		</javac>
+		<!-- Copy other files -->
+		<copy todir="${classes.dir}">  
+		   <fileset dir="src"   
+		    excludes="**/*.java"/>  
+		</copy> 
+	</target>
+	
+	<!-- Client files update -->
+	<target name="client" depends="compile">
+		
+		<!-- Copy client resources -->
+		<copy todir="${web.dir}/images" overwrite="true">
+            <fileset dir="${client.path}/images">
+                <include name="**/*.*"/>                
+            </fileset>
+        </copy>
+		<copy todir="${web.dir}/css" overwrite="true">
+            <fileset dir="${client.path}/css">
+                <include name="**/*.*"/>                
+            </fileset>
+        </copy>
+		<copy todir="${web.dir}/WEB-INF/lib" overwrite="true">
+            <fileset dir="${client.path}/lib">
+                <include name="**/*.jar"/>                
+            </fileset>
+        </copy>	
+		<copy todir="${web.dir}/include" overwrite="true">
+            <fileset dir="${client.path}/include" >
+                <include name="**/*.jsp"/>                
+            </fileset>
+        </copy>	
+		
+		<!-- PROPERTIES BUNDLES --> 
+				
+		<!--					
+		<copy todir="${classes.dir}/${bundles.dir}">
+	    	<fileset dir="${src.dir}/${bundles.dir}"> 
+	    		<include name="**/*.properties" />		
+	    	</fileset>			 
+			<replacetokens>
+            	<token key="CLIENT" value="${s.CLIENT}"/>
+                <token key="CLIENT_NAME" value="${s.CLIENT_NAME}"/>
+            </replacetokens>
+	    </copy>
+	    -->
+		
+		
+		<replace dir="${classes.dir}/${bundles.dir}" value="${s.CLIENT_NAME}" encoding="ISO-8859-1">
+		  <include name="**/*.properties"/>
+		  <replacetoken>@CLIENT_NAME@</replacetoken> 
+		</replace>
+		<!--
+		<replace dir="${classes.dir}/${bundles.dir}" value="${s.CLIENT}">
+		  <include name="**/*.properties"/>
+		  <replacetoken>@CLIENT@</replacetoken> 
+		</replace>
+		-->
+	</target>
+	
+	<target name="jar" depends="client" >
+			<jar destfile="${libportal.dir}/portal.jar" basedir="${classes.dir}"/>
+	</target>		
+					
+	<target name="war" depends="jar">
+		<war destfile="dist/admin_${s.VER}_${s.CLIENT}_${TODAY}.war" webxml="${web.dir}/WEB-INF/web.xml">
+			<fileset dir="${web.dir}"/>							
+			<lib dir="${web.dir}/WEB-INF/lib"/>
+			<!--<classes dir="${classes.dir}"/>-->
+		</war>
+	</target>
+		 	
+	
+</project>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<user-config>
+
+   <user>
+   	   <name>user</name>
+       <password>user</password>
+       <role>admin</role>
+       <mail>pactorre@gmail.com</mail> 
+       <state>on</state>
+       <code>0</code>      
+   </user>   
+
+    <user>
+   	   <name>user3</name>
+       <password>user3</password>
+       <role>admin</role>
+       <mail>fdelatorre@oesia.com</mail>
+       <state>on</state>
+       <code>0</code>             
+   </user>   
+
+
+</user-config>
