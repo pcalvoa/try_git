@@ -1,8 +1,0 @@
-Pasos para el despliegue:
-
-- Desplegar /dist/admin.war en la carpeta /webapps de TOMCAT
-- Configurar el fichero WEB-INF/client-config.xml para añadir la localización de los ws del cliente
-- Si es necesario configurar el certificado del servidor contra el que tenemos que conectar
-	keytool -import -alias "telefónicaID" -keystore "...\jre\lib\security\cacerts" -file "...\TelefonicaID.crt"
-- Configurar los usuarios del portal en el fichero WEB-INF/user-config.xml
-- Configurar la configuración de envío de correos en el fichero WEB-INF/mail-config.xml

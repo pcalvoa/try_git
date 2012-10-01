@@ -4,9 +4,18 @@ import java.io.Serializable;
 
 public class Product implements Serializable {
 
+    private int id;
     private String description;
     private Double price;
     
+    public void setId(int i) {
+        id = i;
+    }
+
+    public int getId() {
+        return id;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -25,8 +34,9 @@ public class Product implements Serializable {
     
     public String toString() {
         StringBuffer buffer = new StringBuffer();
-        buffer.append("Description: " + description + ";");
-        buffer.append("Price: " + price);
+        buffer.append("\n   Id: " + id);
+        buffer.append("\n   Description: " + description);
+        buffer.append("\n   Price: " + price);
         return buffer.toString();
     }
 }
